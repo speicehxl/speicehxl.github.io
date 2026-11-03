@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Search Console 怎么验证网站？新站提交与收录全流程 | 雷哥SEO笔记</title>
+  <meta name="description" content="记录新站接入 Google Search Console 的完整流程：网址前缀验证（HTML 文件方式）、sitemap.xml 提交、URL 检查工具请求编入索引，以及新站收录的注意事项。">
+  <meta name="keywords" content="Google Search Console,GSC验证,网站收录,sitemap提交,技术SEO">
+  <link rel="canonical" href="https://speicehxl.github.io/gsc-setup.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; color: #222; line-height: 1.8; max-width: 760px; margin: 0 auto; padding: 24px 20px 60px; }
+    nav.site { border-bottom: 1px solid #eee; padding-bottom: 12px; font-size: 14px; margin-bottom: 28px; }
+    nav.site a { color: #185FA5; text-decoration: none; margin-right: 16px; }
+    h1 { font-size: 25px; margin-bottom: 8px; }
+    p.meta { color: #888; font-size: 13px; margin-bottom: 32px; }
+    h2 { font-size: 20px; margin: 32px 0 12px; }
+    p { margin-bottom: 14px; }
+    ol, ul { margin: 0 0 14px 22px; }
+    code { background: #f2f4f7; padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+    pre { background: #f2f4f7; padding: 14px 16px; border-radius: 8px; overflow-x: auto; margin: 16px 0; font-size: 13px; line-height: 1.6; }
+    .tip { background: #f6f9fc; border-left: 3px solid #185FA5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    footer { margin-top: 48px; border-top: 1px solid #eee; padding-top: 16px; color: #888; font-size: 13px; }
+    footer a { color: #185FA5; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav class="site">
+    <a href="/">首页</a>
+    <a href="/keyword-research.html">关键词研究</a>
+    <a href="/tdk-guide.html">TDK 写法</a>
+    <a href="/gsc-setup.html">GSC 验证</a>
+  </nav>
+  <article>
+    <h1>Google Search Console 怎么验证网站？新站提交与收录全流程</h1>
+    <p class="meta">2026-11-03 · 技术 SEO · 阅读约 6 分钟</p>
+
+    <p>网站上线只是第一步——搜索引擎不主动认识你，<strong>你要主动把站点递给它</strong>。Google Search Console（简称 GSC）是 Google 官方的站长平台，能提交站点、监控收录、看搜索展示与点击数据。本文记录本站从验证到提交收录的完整操作。</p>
+
+    <h2>第一步：选择验证方式</h2>
+    <p>打开 <a href="https://search.google.com/search-console" rel="nofollow">search.google.com/search-console</a>，添加资源时有两个选项：</p>
+    <ul>
+      <li><strong>网域（Domain）</strong>：覆盖所有子域，但需要 DNS 验证——GitHub Pages 不提供域名 DNS 控制权，选这个会卡住</li>
+      <li><strong>网址前缀（URL prefix）</strong>：只管这一个地址，支持多种验证方式，<strong>GitHub Pages 用户选这个</strong></li>
+    </ul>
+    <p>填入 <code>https://你的用户名.github.io</code>（注意带 https、末尾不带斜杠也可以，但要和实际地址一致）。</p>
+
+    <h2>第二步：HTML 文件验证</h2>
+    <p>网址前缀方式下推荐「HTML 文件」验证：</p>
+    <ol>
+      <li>下载 GSC 提供的验证文件（形如 <code>googlexxxxxxx.html</code>）</li>
+      <li>把文件放到仓库根目录（和 index.html 同级）</li>
+      <li>git push 后，浏览器访问 <code>https://你的用户名.github.io/googlexxxxxxx.html</code> 确认能打开</li>
+      <li>回到 GSC 点「验证」</li>
+    </ol>
+    <div class="tip">验证失败排查：确认文件已 push 成功、GitHub Pages 已完成部署（Actions 页面看绿色对勾）、网址没有拼写错误。国内网络访问 GitHub Pages 不稳定时，换手机热点再试。</div>
+
+    <h2>第三步：提交 sitemap.xml</h2>
+    <p>sitemap 是给爬虫的「页面清单」。左侧菜单「站点地图（Sitemaps）」→ 输入 <code>sitemap.xml</code> → 提交。本站的 sitemap 内容：</p>
+    <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;&lt;loc&gt;https://你的用户名.github.io/&lt;/loc&gt;&lt;/url&gt;
+  &lt;url&gt;&lt;loc&gt;https://你的用户名.github.io/keyword-research.html&lt;/loc&gt;&lt;/url&gt;
+  &lt;url&gt;&lt;loc&gt;https://你的用户名.github.io/tdk-guide.html&lt;/loc&gt;&lt;/url&gt;
+  &lt;url&gt;&lt;loc&gt;https://你的用户名.github.io/gsc-setup.html&lt;/loc&gt;&lt;/url&gt;
+&lt;/urlset&gt;</pre>
+    <p>同时确认根目录有 <code>robots.txt</code>，并在其中声明了 sitemap 地址——这是爬虫协议的基本配置。</p>
+
+    <h2>第四步：请求编入索引</h2>
+    <p>GSC 最上面的搜索框是「网址检查（URL Inspection）」工具：输入任一页面 URL，先点「测试实际网址」确认可被编入索引，再点「<strong>请求编入索引</strong>」。这相当于对 Google 说「请尽快来看这个页面」，比被动等待快得多。四个页面逐个操作一遍。</p>
+
+    <h2>提交之后看什么数据</h2>
+    <ul>
+      <li><strong>覆盖率报告</strong>：看有多少页面「已编入索引」，出现「已发现 - 尚未编入索引」说明爬虫来了但还没收录，属新站正常现象</li>
+      <li><strong>效果报告</strong>：1~2 周后开始有数据，能看到每个页面的展示次数、点击次数、平均排名和实际触发的搜索查询词</li>
+      <li><strong>新站收录周期</strong>：一般 1~7 天开始收录，权重完全建立需要数周</li>
+    </ul>
+
+    <h2>下一步</h2>
+    <p>收录只是开始，真正的优化循环是：看效果报告里的查询词 → 对照当初的<a href="/keyword-research.html">关键词布局</a> → 补内容、调 TDK（写法参考<a href="/tdk-guide.html">TDK 指南</a>）→ 再观察数据变化。</p>
+  </article>
+  <footer>
+    <p>© 2026 SEO 入门学习笔记 · <a href="/">返回首页</a> · <a href="/sitemap.xml">站点地图</a></p>
+  </footer>
+</body>
+</html>
