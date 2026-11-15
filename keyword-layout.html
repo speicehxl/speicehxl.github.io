@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关键词布局怎么做？一页一词的站内布局方法</title>
+  <meta name="description" content="从词库分层到每页落位：一页一词原则、主词出现的 4 个位置、长尾词落到小节的写法，以及关键词蚕食的识别与合并。附本站 14 页布局表。">
+  <meta name="keywords" content="关键词布局,关键词密度,关键词蚕食,一页一词,站内优化">
+  <link rel="canonical" href="https://speicehxl.github.io/keyword-layout.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#185FA5">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SEO 入门学习笔记">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="关键词布局怎么做？一页一词的站内布局方法">
+  <meta property="og:description" content="一页一词原则、主词出现的 4 个位置、长尾词落到小节的写法，以及关键词蚕食的识别与合并。">
+  <meta property="og:url" content="https://speicehxl.github.io/keyword-layout.html">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "关键词布局怎么做？一页一词的站内布局方法",
+    "description": "一页一词原则、主词出现的 4 个位置、长尾词落到小节的写法，以及关键词蚕食的识别与合并。",
+    "datePublished": "2026-11-14",
+    "dateModified": "2026-11-14",
+    "inLanguage": "zh-CN",
+    "author": { "@type": "Person", "name": "小雷" },
+    "mainEntityOfPage": "https://speicehxl.github.io/keyword-layout.html"
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; color: #222; line-height: 1.8; max-width: 760px; margin: 0 auto; padding: 24px 20px 60px; }
+    nav.site { border-bottom: 1px solid #eee; padding-bottom: 12px; font-size: 14px; margin-bottom: 28px; }
+    nav.site a { color: #185FA5; text-decoration: none; margin-right: 16px; }
+    h1 { font-size: 25px; margin-bottom: 8px; }
+    p.meta { color: #888; font-size: 13px; margin-bottom: 32px; }
+    h2 { font-size: 20px; margin: 32px 0 12px; }
+    p { margin-bottom: 14px; }
+    ul, ol { margin: 0 0 14px 22px; }
+    code { background: #f2f4f7; padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+    th, td { border: 1px solid #e0e0e0; padding: 8px 12px; text-align: left; }
+    th { background: #f6f9fc; }
+    .tip { background: #f6f9fc; border-left: 3px solid #185FA5; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+    footer { margin-top: 48px; border-top: 1px solid #eee; padding-top: 16px; color: #888; font-size: 13px; }
+    footer a { color: #185FA5; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav class="site">
+    <a href="/" aria-label="返回首页">首页</a>
+    <a href="/seo-career.html">转行路径</a>
+    <a href="/keyword-research.html">关键词研究</a>
+    <a href="/tdk-guide.html">站内优化</a>
+    <a href="/gsc-setup.html">收录与技术</a>
+  </nav>
+  <article>
+    <h1>关键词布局怎么做？</h1>
+    <p class="meta">2026-11-14 · 关键词研究 · 阅读约 10 分钟</p>
+
+    <p>词挖回来了（方法见<a href="/keyword-research.html">关键词研究工具怎么用</a>），下一步是<strong>关键词布局</strong>：把每个词安排到具体页面上，让「用户搜的词」和「你有的页面」一一对应。这篇文章记录我给自己这个小站做第一轮布局的完整过程——方法、规则和踩的坑，边做边写。</p>
+
+    <h2>关键词布局到底在解决什么问题</h2>
+    <p>没有布局的小站通常长这样：想起什么写什么，标题各说各的，两篇文章讲一个话题。结果是每篇文章都在和自己的兄弟页面抢排名，谁也排不上去。布局要解决的就是三个问题：<strong>每个页面为哪个词负责？这个词在页面里出现在哪？两个页面怎么不打架？</strong>想清楚这三问，后面的操作都是细节。</p>
+
+    <h2>第一步：把词库分成三层</h2>
+    <p>我把挖到的 36 个词按竞争力和作用分成三层：</p>
+    <table>
+      <tr><th>层级</th><th>定义</th><th>例子</th><th>承接位置</th></tr>
+      <tr><td>核心词</td><td>站点主题，竞争大，不指望短期排名</td><td>SEO 转行</td><td>首页 Title</td></tr>
+      <tr><td>栏目词</td><td>一个内容簇的入口词，<strong>主战场</strong></td><td>长尾关键词怎么找、网页 TDK 怎么写</td><td>一页一词，文章页 Title</td></tr>
+      <tr><td>长尾词</td><td>疑问句、带限定词的变体</td><td>关键词放在标题哪里、关键词密度多少合适</td><td>文章的 H2 小节</td></tr>
+    </table>
+    <p>关键取舍在第三层：<strong>长尾词优先落到已有页面的 H2 小节，而不是每个变体拆一篇新文章。</strong>新站页面数少、权重低，拆出一堆 500 字的薄页反而整体拉低质量。挖词的完整流程和筛选标准见<a href="/long-tail-keywords.html">长尾关键词怎么找</a>。</p>
+
+    <h2>第二步：一页一词，先画映射表</h2>
+    <p>写任何新页面之前，先在表格里登记：<strong>页面 URL、主词（1 个）、次词（≤3 个且必须同簇）、优先级</strong>。这张映射表就是站点的「施工图」——想写新题材，先查表里有没有页面已经在负责这个词，有就往里补 H2，没有才建新页。我的原表有 14 行（本站规划 14 页），下面第 8 节贴出了真实版本。</p>
+    <div class="tip">一页一词不是绝对的一页只能有一个词，而是「一个页面只有一个<strong>主词</strong>去参与排名」。次词是同簇的辅助词，落在 H2 里自然覆盖即可。</div>
+
+    <h2>第三步：主词放在哪四个位置</h2>
+    <p>主词定下来后，必须出现在四个位置：</p>
+    <ol>
+      <li><strong>Title 前 15 字内</strong>——权重最高的位置，越靠前信号越强</li>
+      <li><strong>H1</strong>——与 Title 语义一致但不必逐字重复，可以更像人话</li>
+      <li><strong>首段前 100 字</strong>——爬虫最先读到的正文区域</li>
+      <li><strong>URL 英文缩写</strong>——比如本文是 <code>keyword-layout.html</code> 而不是 <code>page5.html</code></li>
+    </ol>
+    <p>四处之外不做刻意重复。TDK 三个标签各自怎么写，细节见<a href="/tdk-guide.html">网页 TDK 怎么写</a>。</p>
+
+    <h2>第四步：长尾词落小节，还是一页一篇？</h2>
+    <p>我的判断标准是看<strong>内容可交付度</strong>：这个长尾词能不能撑起一篇 800 字以上、有独立价值的文章？能（比如「网站不收录怎么办」），就建独立页；不能（比如「title 标签怎么写」），就写成已有页面的一个 H2 小节。反过来也有回收机制：如果某个 H2 小节越长越丰满、自己就能成文，再拆出去，用原位置一段简介加内链承接。</p>
+
+    <h2>关键词密度还要不要管？</h2>
+    <p>「关键词密度 2%~8%」是上个时代的遗产。现在的实践是<strong>不做密度、做覆盖</strong>：不数主词出现几次，而是让同义说法和疑问变体自然出现。写「关键词布局」自然会写到「词怎么分配」「放哪个位置」「布局表」——这就是覆盖。刻意凑密度只会把句子写得不像人话，现代搜索引擎对语义的理解早已不靠词频。</p>
+
+    <h2>关键词蚕食：怎么发现、怎么合并</h2>
+    <p><strong>关键词蚕食</strong>指两个页面抢同一个词，搜索引擎不知道该排哪一个，结果两个都排不好。发现方法：在 GSC「效果 → 查询」里，如果同一个查询词交替出现在两个 URL 上，就是蚕食信号。处理方式是合并而不是加 canonical：把两页内容并成一页更完整的，另一页 301 重定向过去，权重才真正集中。预防的办法就是第二步那张映射表——建页前先查，一页一词。</p>
+
+    <h2>本站 14 页的真实布局表</h2>
+    <p>下面是我这一轮布局的完整映射表（标「待建」的页面会按优先级陆续上线）：</p>
+    <table>
+      <tr><th>页面</th><th>主词</th><th>簇</th><th>状态</th></tr>
+      <tr><td>/</td><td>SEO 转行</td><td>首页</td><td>已上线</td></tr>
+      <tr><td>/seo-career.html</td><td>转行做 SEO</td><td>转行路径</td><td>已上线</td></tr>
+      <tr><td>/software-test-to-seo.html</td><td>软件测试转 SEO</td><td>转行路径</td><td>已上线</td></tr>
+      <tr><td>/keyword-research.html</td><td>关键词研究工具怎么用</td><td>关键词</td><td>已上线</td></tr>
+      <tr><td>/long-tail-keywords.html</td><td>长尾关键词怎么找</td><td>关键词</td><td>已上线</td></tr>
+      <tr><td>/keyword-layout.html</td><td>关键词布局</td><td>关键词</td><td>本页</td></tr>
+      <tr><td>/tdk-guide.html</td><td>网页 TDK 怎么写</td><td>站内优化</td><td>已上线</td></tr>
+      <tr><td>/gsc-setup.html</td><td>GSC 怎么验证网站</td><td>收录与技术</td><td>已上线</td></tr>
+      <tr><td>/gsc-indexing.html</td><td>网站不收录怎么办</td><td>收录与技术</td><td>已上线</td></tr>
+      <tr><td>/internal-links.html</td><td>内链怎么布局</td><td>站内优化</td><td>待建</td></tr>
+      <tr><td>/seo-learning-path.html</td><td>零基础怎么学 SEO</td><td>转行路径</td><td>待建</td></tr>
+      <tr><td>/seo-interview.html</td><td>SEO 专员面试问什么</td><td>转行路径</td><td>待建</td></tr>
+      <tr><td>/robots-txt.html</td><td>robots.txt 怎么写</td><td>收录与技术</td><td>待建</td></tr>
+      <tr><td>/404-page.html</td><td>404 页面怎么做</td><td>收录与技术</td><td>待建</td></tr>
+    </table>
+    <p>配套的还有一张内链矩阵：每页至少 2 条出站内链、必须有 1 条回簇枢纽，锚文本用目标页主词本身。布局做完只是开始，接下来按 30/60/90 天的节奏在 GSC 里验证效果——收录和排名的排查方法见<a href="/gsc-setup.html">GSC 验证与收录全流程</a>。</p>
+  </article>
+  <footer>
+    <p>© 2026 SEO 入门学习笔记 · <a href="/">返回首页</a> · <a href="/sitemap.xml">站点地图</a></p>
+  </footer>
+</body>
+</html>

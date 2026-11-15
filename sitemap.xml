@@ -2,22 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://speicehxl.github.io/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://speicehxl.github.io/seo-career.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://speicehxl.github.io/software-test-to-seo.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://speicehxl.github.io/keyword-research.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://speicehxl.github.io/long-tail-keywords.html</loc>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://speicehxl.github.io/keyword-layout.html</loc>
+    <lastmod>2026-11-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://speicehxl.github.io/tdk-guide.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://speicehxl.github.io/gsc-setup.html</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://speicehxl.github.io/gsc-indexing.html</loc>
+    <lastmod>2026-11-14</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
